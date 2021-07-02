@@ -1,4 +1,21 @@
 const mosquito = document.getElementById('mosquito');
+const field = document.getElementById('field');
+
+
+field.addEventListener('click', (e)=> {
+
+    var clientRect = mosquito.getBoundingClientRect() ;
+    var clientX = clientRect.left ;
+    var clientY = clientRect.top ;
+
+    console.log(`蚊のx軸：${clientX}`);
+    console.log(`蚊のy軸：${clientY}`);
+
+    console.log(`マウスのx軸：${e.pageX}`);
+    console.log(`マウスのy軸：${e.pageY}`);
+
+
+})
 
 let randomNumX = Math.floor(Math.random() * 50);
 let randomNumY = Math.floor(Math.random() * 50);
@@ -29,3 +46,5 @@ const countUp = ()=> {
 }
 
 countUp();
+
+
